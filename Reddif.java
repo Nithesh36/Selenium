@@ -25,7 +25,7 @@ public class Reddif {
 		EdgeOptions opt=new EdgeOptions();
 		opt.setCapability("prefs", edgePrefs);
 
-		WebDriver driver= new EdgeDriver();	
+		WebDriver driver= new EdgeDriver(opt);	
 		driver.get("https://www.rediff.com/");
 		driver.manage().window().maximize();
 		//		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -33,12 +33,11 @@ public class Reddif {
 		crateAc.click();	
 		//		TimeUnit.SECONDS.sleep(3);
 		//fullname
-		WebDriverWait w=new WebDriverWait(driver, 10);
-		w.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//table[2]//descendant::input[@name='name73e63e3b']")));
-		driver.findElement(By.xpath("//table[2]//descendant::input[@name='name73e63e3b']")).sendKeys("Nithesh");
+		
+		driver.findElement(By.cssSelector("form table:nth-child(3)  tr:nth-of-type(3)>td>input")).sendKeys("Nithesh");
 		
 		//mail
-		driver.findElement(By.xpath("//tbody/tr[7]/td[3]/input[1]")).sendKeys("nitheshkumar0731");
+		driver.findElement(By.cssSelector("form table:nth-child(3)  tr:nth-of-type(7) td>input:nth-of-type(1)")).sendKeys("nitheshkumar0731");
 		
 		//password
 		driver.findElement(By.xpath("//tbody/tr[9]/td[3]/input")).sendKeys("Apple@25");
