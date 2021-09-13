@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="softwaretestingmaterial">
+ <test name="testngTest">
+ 
+ <groups>
+ <dependencies>
+ <group name="FirstGroup" depends-on="SecondGroup"></group>
+ </dependencies>
+ </groups>
+ 
+ <classes>
+ <class name="DependsonGroups" />
+ </classes>
+ 
+ </test>
+</suite>

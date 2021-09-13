@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="softwaretestingmaterial">
+ <test name="testngTest">
+ <parameter name='List1' value='Nithesh'>
+ </parameter>
+ <parameter name='List2' value='Kumar'>
+ </parameter>
+ <classes>
+ <class name="ParameterTestng" />
+ </classes>
+ 
+ </test>
+</suite>
