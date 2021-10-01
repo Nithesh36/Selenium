@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Se" >
+
+  <test name="correctData" >
+  <parameter name='name' value='Admin'>
+ </parameter>
+ <parameter name='pas' value='admin123'>
+ </parameter>
+  <classes>
+    <class name="dataDrivens.MultipleParameterPas">
+       </class>
+		
+    </classes>
+
+  </test>
+  <test name="wrongPasword">
+  <parameter name='name' value='Admin'></parameter>
+  <parameter name='pas' value='sd'></parameter>
+  <classes>
+  <class name="dataDrivens.WrongPasword1"></class>
+  </classes>
+  </test>
+</suite>

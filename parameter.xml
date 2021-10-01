@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="mysuite">
+ <test name="testngTest">
+ <parameter name='List1' value='Nithesh'>
+ </parameter>
+ <parameter name='List2' value='Kumar'>
+ </parameter>
+ <classes>
+ <class name="testNgDemo1.ParametrizedTest" />
+ </classes>
+ 
+ </test>
+</suite>
